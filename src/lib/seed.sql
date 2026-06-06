@@ -113,7 +113,7 @@ INSERT INTO team_members (name, role, bio) VALUES
 
 -- Insert default contact info
 INSERT INTO contact_info (address, phone, email, whatsapp, social_links) VALUES
-  ('123 Wellness Avenue, Suite 200, Hope City, HC 10001', '+265999 678 150', 'info@cgwi.org', 'https://wa.me/265999678150', '["Facebook", "Twitter", "Instagram", "LinkedIn", "YouTube"]');
+  ('CGWI, Matawale, Zomba, Malawi.', '+265999 678 150', 'info@cgwi.org', 'https://wa.me/265999678150', '["Facebook", "Twitter", "Instagram", "LinkedIn", "YouTube"]');
 
 -- Enable Row Level Security
 ALTER TABLE programs ENABLE ROW LEVEL SECURITY;

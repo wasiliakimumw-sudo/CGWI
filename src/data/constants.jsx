@@ -276,7 +276,7 @@ export const faqs = [
 ];
 
 export const contactInfo = {
-  address: '123 Wellness Avenue, Suite 200, Hope City, HC 10001',
+  address: 'CGWI, Matawale, Zomba, Malawi.',
   phone: '+265999 678 150',
   whatsapp: 'https://wa.me/265999678150',
   email: 'info@cgwi.org',

@@ -105,7 +105,7 @@ export default function AdminDashboard() {
       setContact(ci);
     } catch (err) {
       console.error('Load error:', err);
-      showMessage('Database not initialized. Run the SQL seed script first.');
+      showMessage('Database tables not found. Go to /admin/setup for instructions.');
     }
   }
 

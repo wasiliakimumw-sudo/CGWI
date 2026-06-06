@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Heart, Lock } from 'lucide-react';
 import { navLinks } from '../data/constants';
 
 export default function Navbar() {
@@ -39,6 +39,15 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
+            <Link
+              to="/admin/login"
+              className={`p-2 rounded-lg transition-colors ${
+                scrolled ? 'text-gray-400 hover:text-primary hover:bg-primary/5' : 'text-white/60 hover:text-white hover:bg-white/10'
+              }`}
+              aria-label="Admin login"
+            >
+              <Lock className="w-4 h-4" />
+            </Link>
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -99,6 +108,18 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.05 }}
+              >
+                <Link
+                  to="/admin/login"
+                  className="flex items-center gap-2 px-4 py-3 rounded-lg text-sm font-medium text-gray-400 hover:text-primary hover:bg-gray-50 transition-colors"
+                >
+                  <Lock className="w-4 h-4" /> Admin
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}

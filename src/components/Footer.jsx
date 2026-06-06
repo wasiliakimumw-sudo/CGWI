@@ -93,6 +93,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link to="/admin/login" className="hover:text-primary transition-colors text-gray-500 text-xs">Admin</Link>
             <button
               onClick={scrollToTop}
               className="bg-primary hover:bg-primary-dark text-white p-2 rounded-lg transition-colors"

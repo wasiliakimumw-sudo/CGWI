@@ -119,7 +119,7 @@ INSERT INTO team_members (name, role, bio) VALUES
 
 -- Insert default contact info
 INSERT INTO contact_info (address, phone, email, whatsapp, social_links) VALUES
-  ('123 Wellness Avenue, Suite 200, Hope City, HC 10001', '+265999 678 150', 'info@cgwi.org', 'https://wa.me/265999678150', '["Facebook", "Twitter", "Instagram", "LinkedIn", "YouTube"]');
+  ('CGWI, Matawale, Zomba, Malawi.', '+265999 678 150', 'info@cgwi.org', 'https://wa.me/265999678150', '["Facebook", "Twitter", "Instagram", "LinkedIn", "YouTube"]');
 
 -- Enable Row Level Security
 ALTER TABLE programs ENABLE ROW LEVEL SECURITY;
@@ -319,15 +319,19 @@ export default function AdminSetup() {
 
           {!checking && !anyExist && (
             <div className="border-t border-gray-100 pt-6">
-              <h3 className="font-semibold mb-3">Quick Setup Instructions</h3>
+              <h3 className="font-semibold mb-3">Setup Instructions</h3>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4 text-sm text-blue-800">
+                <p className="font-medium mb-1">Need Supabase dashboard access?</p>
+                <p>Go to <a href="https://supabase.com/dashboard" target="_blank" rel="noopener noreferrer" className="underline">supabase.com/dashboard</a> and click <strong>"Forgot Password?"</strong> to reset your login using the email you signed up with.</p>
+              </div>
               <ol className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-2">
                   <span className="bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5">1</span>
-                  <span>Click <strong>"Open Supabase SQL Editor"</strong> above</span>
+                  <span>Log into <a href="https://supabase.com/dashboard" target="_blank" rel="noopener noreferrer" className="underline">Supabase Dashboard</a></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5">2</span>
-                  <span>Click <strong>"Copy SQL Script"</strong>, paste it into the editor, and click <strong>Run</strong></span>
+                  <span>Open the <strong>SQL Editor</strong> and paste the SQL below, then click <strong>Run</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5">3</span>
@@ -335,11 +339,7 @@ export default function AdminSetup() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5">4</span>
-                  <span>Go to Supabase Dashboard &rarr; Authentication &rarr; Users &rarr; <strong>Add User</strong> to create an admin account</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5">5</span>
-                  <span>Sign in at <strong>/admin/login</strong> with your new credentials</span>
+                  <span>Then use <strong>/admin</strong> dashboard to manage all content</span>
                 </li>
               </ol>
             </div>

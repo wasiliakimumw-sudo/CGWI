@@ -8,7 +8,6 @@ import TestimonialsSection from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
 import DonateCTA from '../components/DonateCTA';
 import HeroCarousel from '../components/HeroCarousel';
-import { usePrograms, usePartners as usePartnersData, useSiteText } from '../hooks/useData';
 
 const programIcons = [Scissors, Stethoscope, Mic, Globe];
 
